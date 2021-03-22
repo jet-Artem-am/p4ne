@@ -4,8 +4,8 @@ import glob
 
 ip_set = set()
 
-for current_f_name in glob.glob("/Users/aa.morzherin/Documents/p4ne_training/config_files/*.txt"):
-    with open(current_f_name) as a:
+for f_name in glob.glob("/Users/aa.morzherin/Documents/p4ne_training/config_files/*.txt"):
+    with open(f_name) as a:
         for cur_line in a:
             if cur_line.find("ip address") == 1:
                 ip_set.add(cur_line.replace("ip address", "").strip())
